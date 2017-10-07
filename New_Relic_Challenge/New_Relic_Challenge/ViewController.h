@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface ViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+{
+    IBOutlet UITableView *tableView;
+    
+}
+ @property (strong, nonatomic) IBOutlet UITextField *textField;
+ @property (strong, nonatomic) IBOutlet UILabel *labelCount;
+@property (strong, nonatomic) NSMutableArray *nr_mut_array;
+- (IBAction) clearList;
+- (IBAction) addToList;
+- (IBAction) removeRow;
+- (IBAction) replaceRow;
+- (IBAction) addBefore;
+- (IBAction) addAfter;
+- (IBAction) shuffleArray;
 @end
 

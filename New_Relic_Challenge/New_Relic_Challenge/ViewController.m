@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //Allocate and initialize the NSMutableArray
+    self.nr_mut_array_list1 = [[[NSMutableArray alloc] init]autorelease]; //auto release since ARC is turned off
+    self.nr_mut_array_list2 = [[[NSMutableArray alloc] init]autorelease];
     [self refreshArray];
     tableView1.delegate = self;
     tableView1.dataSource = self;
@@ -27,10 +30,7 @@
     [super didReceiveMemoryWarning];
 }
 - (void) refreshArray {
-    //Allocate and initialize the NSMutableArray
-    self.nr_mut_array_list1 = [[[NSMutableArray alloc] init]autorelease]; //auto release since ARC is turned off
-    self.nr_mut_array_list2 = [[[NSMutableArray alloc] init]autorelease];
-    
+  
     //Initial Data for the first list
     [self.nr_mut_array_list1 addObject:@"Eric Enders"];
     [self.nr_mut_array_list1 addObject:@"is"];
@@ -38,6 +38,8 @@
     [self.nr_mut_array_list1 addObject:@"for"];
     [self.nr_mut_array_list1 addObject:@"this"];
     [self.nr_mut_array_list1 addObject:@"role"];
+    
+    [self.nr_mut_array_list2 removeAllObjects];
     //Update Count method to update the label with the list count
     [self updateCount];
 }

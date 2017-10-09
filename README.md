@@ -6,3 +6,6 @@
 
 ###    Usage
   You can Alter List 1 with the buttons.  You can merge List 1 with List 2 with the merge button.  The merge button will also sort the final list.  In order to complete some functions, you must select a row to add a string before or after, replace, or remove.
+
+###    Device
+  The application was built and tested with iPhone 8 Plus.

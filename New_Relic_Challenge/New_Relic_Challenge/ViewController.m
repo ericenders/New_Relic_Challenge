@@ -32,6 +32,8 @@
 }
 - (void) refreshArray {
     [self.nr_mut_array_list1 removeAllObjects];
+    mergeLength = 0;
+    
     //Initial Data for the first list
     [self.nr_mut_array_list1 addObject:@"Eric Enders"];
     [self.nr_mut_array_list1 addObject:@"is"];

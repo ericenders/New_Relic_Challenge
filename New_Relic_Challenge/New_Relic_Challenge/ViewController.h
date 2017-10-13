@@ -12,7 +12,9 @@
 {
     IBOutlet UITableView *tableView1;
     IBOutlet UITableView *tableView2;
+    
 }
+@property int mergeLength;
 @property (strong, nonatomic) IBOutlet UITextField *textField;
 @property (strong, nonatomic) IBOutlet UILabel *list1LabelCount;
 @property (strong, nonatomic) IBOutlet UILabel *list2LabelCount;
@@ -22,6 +24,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *addAfterButton;
 @property (strong, nonatomic) NSMutableArray *nr_mut_array_list1;
 @property (strong, nonatomic) NSMutableArray *nr_mut_array_list2;
+
+- (NSArray *)mergeSortBreakdown:(NSArray *)targetArray;
+- (NSArray *)merge:(NSArray *)arrayLeft :(NSArray *)arrayRight;
 - (IBAction) clearList;
 - (IBAction) addToList;
 - (IBAction) removeRow;
@@ -31,5 +36,6 @@
 - (IBAction) shuffleArray;
 - (IBAction) sortArray;
 - (IBAction) mergeLists;
+- (IBAction) mergeSort;
 @end
 
